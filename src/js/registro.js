@@ -25,75 +25,103 @@ function validarInput(e) {
 
     // Validación cédula
     if (e.target.id === 'inp-cedula') {
-
+        const validar =document.getElementById("cedulaValidation");
         if (expRegCedula.test(e.target.value)) {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
+            
         } else {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         }
-
+        validar.style.borderRadius = "5px"
     }
     // Validación nombres
     if (e.target.id === 'inp-nombres') {
-
+        const validar=document.getElementById("nombresValidation");
         if (expRegNombres.test(e.target.value)) {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
         } else {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         }
 
+        validar.style.borderRadius = "5px"
     }
     // Validación apellidos
     if (e.target.id === 'inp-apellidos') {
-
+        const validar=document.getElementById("apellidosValidation");
         if (expRegNombres.test(e.target.value)) {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
         } else {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         }
-
+        validar.style.borderRadius = "5px"
     }
     // Fecha de nacimiento
     if (e.target.id === 'inp-fecha-nac') {
+        const validar=document.getElementById("fechaNacimientoValidation");
         const fechaNac = new Date(e.target.value);
         if (calcularEdad(fechaNac) < 18) {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         } else {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
         }
+        validar.style.borderRadius = "5px"
     }
     // Validación correo
     if (e.target.id === 'inp-correo') {
+        const validar=document.getElementById("correoValidation");
         if (expRegEmail.test(e.target.value)) {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
         } else {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         }
+        validar.style.borderRadius = "5px"
     }
     if (e.target.id === 'inp-usuario') {
+        const validar=document.getElementById("usuarioValidation");
         if (e.target.value != "") {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
         } else {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         }
+        validar.style.borderRadius = "5px"
     }
 
     if (e.target.id === 'inp-contrasena') {
+        const validar=document.getElementById("claveValidation");
         if (expRegClave.test(e.target.value)) {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
         } else {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         }
+        validar.style.borderRadius = "5px"
     }
 
     //valido que las contraseñas sean iguales
     if (e.target.id === 'inp-contrasena-con') {
+        const validar=document.getElementById("claveValidation2");
         const password = document.getElementById("inp-contrasena").value
         if (e.target.value != password) {
             e.target.classList.add('error');
+            validar.style.backgroundColor = "rgb(192, 57, 43)"
         } else {
             e.target.classList.add('success');
+            validar.style.backgroundColor = "rgb(9, 204, 9)"
         }
+        validar.style.borderRadius = "5px"
     }
 
 }

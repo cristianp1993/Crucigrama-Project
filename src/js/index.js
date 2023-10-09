@@ -9,6 +9,7 @@ async function cargarPeliculas() {
     peliculas = data.peliculas;
     console.log(peliculas);
     fillCards();
+    localStorage.clear();
   } catch (error) {
     console.error("Error fetching JSON:", error);
   }

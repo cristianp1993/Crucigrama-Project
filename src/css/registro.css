@@ -3,6 +3,14 @@ body{
     
 }
 
+.row{
+  display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(to right, #ff5252, #b33939); 
+    box-shadow: 0 0 20px rgba(255, 82, 82, 0.8);
+}
+
 .container {
     padding: 20px;
     background: linear-gradient(to right, #ff5252, #b33939); 
@@ -12,7 +20,7 @@ body{
     display: flex;
     justify-content: center; 
     align-items: center; 
-    min-height: 90vh; 
+    min-height: 70vh; 
 }
 
 

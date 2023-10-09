@@ -1,78 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Magazin</title>
-    <link href="../../bootstrap-4.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="../../bootstrap-4.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- <script src="bootstrap-4.0.0/dist/js/bootstrap.min.js"></script> -->
     <!-- <link rel="stylesheet" href="stylesBg.css"> -->
-    <link rel="stylesheet" href="../css/registro.css">
-</head>
+    <link rel="stylesheet" href="../css/registro.css" />
+  </head>
 
-<body>
-
+  <body>
+    <div class="row">
+        <h2>MagaCine</h2>
+    </div>
     <div class="container">
-        <form class="form-inline" id="formulario">
-            <div class="title-registro">
-                <h3>Registrar Jugador</h3>
-            </div>
-            <div>
-                <div class="form-group">
-                    <label for="inp-cedula" class="sr-only">N° Documento</label>
-                    <input tabindex="1" type="text" id="inp-cedula" placeholder="N° Documento" class="form-control validar" required>
-                </div>
-                <div class="form-group">
-                    <label class="sr-only">Apellidos</label>
-                    <input tabindex="3" type="text" id="inp-apellidos" placeholder="Apellidos" class="form-control validar" required>
-                </div> 
-                
-                <div class="form-group">
-                    <label class="sr-only">Usuario</label>
-                    <input tabindex="5" type="text" placeholder="Usuario" id="inp-usuario" class="form-control validar" required>
-                </div>
-                <div class="form-group">
-                    <label class="sr-only">Contraseña</label>
-                    <input tabindex="7" type="password" placeholder="Contraseña" id="inp-contrasena" class="form-control validar" required>
-                </div>
-            </div>
-            <div>
-                
-                <div class="form-group">
-                    <label class="sr-only">Nombres</label>
-                    <input tabindex="2" type="text" id="inp-nombres" placeholder="Nombres" class="form-control validar" required>
-                </div>
-                <div class="form-group">
-                    <label class="sr-only">Correo</label>
-                    <input tabindex="4" type="email" id="inp-correo" placeholder="Correo" class="form-control validar" required>
-                </div>         
-                
-                <div class="form-group">
-                    <label class="sr-only">Fecha Nacimiento</label>
-                    <input tabindex="6" type="date" id="inp-fecha-nac" title="Fecha de Nacimiento" class="form-control validar" required>
-                </div>
-                <div class="form-group">
-                    <label class="sr-only">Confirmar Contraseña</label>
-                    <input tabindex="8" type="password" placeholder="Confirmar Contraseña" id="inp-contrasena-con" class="form-control validar" required>
-                </div>
-            </div>
-            <div class="boton-adicionar">
-                <button id="btn-adicionar" class="" type="button">
-                    Guardar Participante
-                </button>            
-            </div>
-        </form>
-        <div class="btn-regresar">
-            <button class="nav-link btn btn-dark" id="nav-registrar" type="button" >
-                <a href="../index.html">Regresar</a>
-            </button>
+       
+      <form class="form-inline" id="formulario">
+        <div class="title-registro">
+          <h3>Registrar Jugador</h3>
         </div>
-        
-    </div> 
+        <div>
+          <div class="form-group">
+            <label for="inp-cedula" class="sr-only">N° Documento</label>
+            <input
+              tabindex="1"
+              type="text"
+              id="inp-cedula"
+              placeholder="N° Documento"
+              class="form-control validar"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Nombres</label>
+            <input
+              tabindex="2"
+              type="text"
+              id="inp-nombres"
+              placeholder="Nombres"
+              class="form-control validar"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Apellidos</label>
+            <input
+              tabindex="3"
+              type="text"
+              id="inp-apellidos"
+              placeholder="Apellidos"
+              class="form-control validar"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Fecha Nacimiento</label>
+            <input
+              tabindex="6"
+              type="date"
+              id="inp-fecha-nac"
+              title="Fecha de Nacimiento"
+              class="form-control validar"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Correo</label>
+            <input
+              tabindex="4"
+              type="email"
+              id="inp-correo"
+              placeholder="Correo"
+              class="form-control validar"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Usuario</label>
+            <input
+              tabindex="5"
+              type="text"
+              placeholder="Usuario"
+              id="inp-usuario"
+              class="form-control validar"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Contraseña</label>
+            <input
+              tabindex="7"
+              type="password"
+              placeholder="Contraseña"
+              id="inp-contrasena"
+              class="form-control validar"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="sr-only">Confirmar Contraseña</label>
+            <input
+              tabindex="8"
+              type="password"
+              placeholder="Confirmar Contraseña"
+              id="inp-contrasena-con"
+              class="form-control validar"
+              required
+            />
+          </div>
+
+          <div class="boton-adicionar">
+            <button id="btn-adicionar" class="" type="button">
+              Guardar Participante
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="mensajesValidadores">
+        <ul class="mensajesValidadores">
+          <li id="cedulaValidation">
+            Cédula: sólo números, longitud entre 7 y 11 caracteres
+          </li>
+          <li id="nombresValidation">
+            Nombres : sólo letras
+          </li>
+          <li id="apellidosValidation">
+            Apellidos : sólo letras
+          </li>
+          <li id="fechaNacimientoValidation">
+            Fecha de nacimiento: El jugador debe ser mayor a 18 años
+          </li>
+          <li id="correoValidation">Correo electrónico válido</li>
+          <li id="usuarioValidation">Nombre de usuario alfanumérico</li>
+          <li id="claveValidation">
+            Contraseña: entre 5 y 8 caracteres, al menos 1 mayúscula, 1 minúscula, 1
+            numérico, y 1 carácter especial (*, $, ó ?)
+          </li>
+          <li id="claveValidation2">
+            Confirmar contraseña : debe coincidir con la
+            primera.
+          </li>
+          <li id="jugadoresValidation">
+            Para jugar se deben tener 2 jugadores registrados
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="btn-regresar">
+      <button class="nav-link btn btn-dark" id="nav-registrar" type="button">
+        <a href="../index.html">Regresar</a>
+      </button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/registro.js"></script>
-    
-</body>
-
+  </body>
 </html>
