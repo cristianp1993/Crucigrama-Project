@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crucigrama</title>
+    <link rel="stylesheet" href="../css/crucigrama.css">
+</head>
+<body>
+    <h1>CRUCIGRAMA MAGACINE</h1>
+    <div class="containerCrucigrama">
+        <div class="player1" id="DivPlayer1">
+            <h2>Jugador #1</h2>
+            <h3 id="turnoPlayer1"></h3>
+            <h3 id="titleplayer1"></h3>
+            <h4>Puntos</h4>
+            <input class="inp-points" id="inp-points1" type="number" readonly>
+        </div>
+        <table id="tablaCrucigrama">
+          
+        </table>
+        <div class="player2" id="DivPlayer2">
+            <h2>Jugador #2</h2>
+            <h3 id="turnoPlayer2"></h3>
+            <h3 id="titleplayer2"></h3>
+            <h4>Puntos</h4>
+            <input class="inp-points" id="inp-points2" type="number" readonly>
+        </div>
+    </div>
+
+    <div class="box">
+        <span style="--i:1;"><div class="image-container">
+            <div class="title">#1</div>
+            <img src="../assets/Pistas/cadenaPerpetua.jpg" alt="1">
+        </div></span>
+        <span style="--i:2;">
+            <div class="title">#2</div>
+            <img src="../assets/Pistas/zodiac.jpg" alt="2"></span>
+        <span style="--i:3;">
+            <div class="title">#3</div>
+            <img src="../assets/Pistas/casablanca.jpg" alt="3"></span>
+        <span style="--i:4;">
+            <div class="title">#4</div>
+            <img src="../assets/Pistas/islasiniestra.jpg" alt="4"></span>
+        <span style="--i:5;">
+            <div class="title">#5</div>
+            <img src="../assets/Pistas/origenes.jpg" alt="5"></span>
+        <span style="--i:6;">
+            <div class="title">#6</div>
+            <img src="../assets/Pistas/fincher.jpg" alt="6"></span>
+        <span style="--i:7;">
+            <div class="title">#7</div>
+            <img src="../assets/Pistas/lynch.jpg" alt="7"></span>
+        <span style="--i:8;">
+            <div class="title">#8</div>
+            <img src="../assets/Pistas/scorsese.jpg" alt="8"></span>
+        <span style="--i:9;">
+            <div class="title">#9</div>
+            <img src="../assets/Pistas/nolan.jpg" alt="9"></span>
+        <span style="--i:10;">
+            <div class="title">#10</div>
+            <img src="../assets/Pistas/kubric.jpg" alt="10"></span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/crucigrama.js"></script>
+</body>
+</html>

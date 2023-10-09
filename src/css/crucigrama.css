@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+body{
+    background: linear-gradient(to right, #000000, #333333);
+    height: 90vh; 
+    margin: 0; 
+    color: white;
+}
+
+.containerCrucigrama {
+    display: flex;
+    flex-direction: row; 
+    text-align: center;
+    justify-content: space-between; 
+    align-items: flex-start; /* Cambiado a flex-start para alinear en la parte superior */
+    height: 60vh;
+}
+
+.player1,
+.player2,
+#tablaCrucigrama {
+    flex: 1; 
+    margin: 15px;
+}
+
+h1,
+.player1,
+.player2{
+    font-family: 'Kalam', cursive;    
+    padding: 10px;
+    border-radius: 10px;
+}
+h1{
+    display: flex;
+    flex-direction: row; 
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+}
+
+.inp-points{
+    height: 30px;
+    width: 100px;
+    border-radius:10px ;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.box{
+  
+    position: relative;
+    width: 20%; 
+    height: 20vh;
+    transform-style: preserve-3d;
+    animation: animate 30s linear infinite;
+    margin-left: 40%;
+}
+
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.box span {
+    position: absolute;
+    display: inline-block;
+    width: 150px; 
+    height: 150px; 
+    overflow: hidden;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*36deg)) translateZ(350px); 
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #1004);
+}
+
+.box span .image-container {
+    position: relative;
+}
+
+.box span img{
+    
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+

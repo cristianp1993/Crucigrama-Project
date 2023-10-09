@@ -1,0 +1,37 @@
+
+body{
+    background-color: #121212; /* Fondo oscuro */
+    
+}
+nav{    
+    background: linear-gradient(to right, #ff5252, #b33939); 
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 35px;
+}
+.nav-link{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+.register-users{
+    color: white;
+}
+.container{
+    padding: 10px;
+    background: linear-gradient(to right, #ff5252, #b33939); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(255, 82, 82, 0.8);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+
+

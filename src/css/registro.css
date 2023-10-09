@@ -1,0 +1,72 @@
+body{
+    background-color: #121212; /* Fondo oscuro */
+    
+}
+
+.container {
+    padding: 20px;
+    background: linear-gradient(to right, #ff5252, #b33939); 
+    border-radius: 10px; 
+    box-shadow: 0 0 20px rgba(255, 82, 82, 0.8);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 90vh; 
+}
+
+
+.title-registro {
+    color: white;
+    font-size: 30rem;
+}
+#btn-adicionar {
+  background-color: rgba(177, 81, 81, 0.8);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  height: 40px;
+  width: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btn-regresar {
+    position: absolute;
+    bottom: 10px; 
+    left: 10px; 
+}
+
+#btn-adicionar:hover {
+  transform: scale(1.2);
+}
+
+.success {
+  border: 3px solid rgb(9, 204, 9);
+}
+
+.error {
+  border: 4px solid rgb(255, 251, 0);
+}
+
+.form-group {
+  margin: 5px;
+}
+
+.form-inline .form-control {
+  width: 350px;
+}
+
+.form-inline {
+  justify-content: center;
+  text-align: center;
+}
+
+.title-registro,
+.boton-adicionar {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}

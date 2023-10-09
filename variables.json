@@ -1,0 +1,72 @@
+{
+  "peliculas": [
+    {
+      "titulo": "El hombre duplicado",
+      "anio": 2013,
+      "director": "Denis Villanueve",
+      "descripcion": "Un amable profesor universitario descubre a un actor que se parece mucho a él y se adentra en los temas privados del hombre.",
+      "imagen": "Enemy.png"
+    },
+    {
+      "titulo": "El curioso caso de Benjamin Button",
+      "anio": 2008,
+      "director": "David Fincher",
+      "descripcion": "Benjamin Button nace como un hombre mayor en Nueva Orleans y rejuvenece. Poco a poco, se familiariza con la naturaleza del amor y la muerte.",
+      "imagen": "BenjaminButton.png"
+    },
+    {
+      "titulo": "Ella",
+      "anio": 2013,
+      "director": "Spike Jonze",
+      "descripcion": "En Los Ángeles, un escritor desanimado desarrolla una especial relación amorosa con el sistema operativo de su computadora, una intuitiva y sensible entidad llamada Samantha.",
+      "imagen": "Her.png"
+    },
+    {
+      "titulo": "Pienso en el final",
+      "anio": 2020,
+      "director": "Charlie Kaufman",
+      "descripcion": "Va a conocer a la familia de su novio. Pero algo le falla a él, a sus padres o a su propia realidad fragmentada.",
+      "imagen": "ImThinking.png"
+    },
+    {
+      "titulo": "Jojo Rabbit",
+      "anio": 2019,
+      "director": "Taika Waititi",
+      "descripcion": "Durante la Segunda Guerra Mundial, un niño que pertenece a las Juventudes Hitlerianas descubre que su madre está ocultando en el ático de su casa a una niña judía.",
+      "imagen": "JojoRabbit.png"
+    },
+    {
+      "titulo": "Primicia Mortal",
+      "anio": 2014,
+      "director": "Dan Gilroy",
+      "descripcion": "Louis Bloom es un joven de Los Ángeles, sin empleo ni escrúpulos, quien, después de haber sido testigo de un accidente espeluznante, decide que quiere ganar fama y fortuna a través del periodismo sensacionalista.",
+      "imagen": "Nightcrawler.png"
+    },
+    {
+      "titulo": "El Juego",
+      "anio": 2014,
+      "director": "David Fincher",
+      "descripcion": "Nicholas recibe un regalo de cumpleaños de su hermano: participar en un juego de acción en vivo que involucra todos los aspectos de su vida.",
+      "imagen": "Thegame.png"
+    },
+    {
+      "titulo": "Los Otros",
+      "anio": 2001,
+      "director": "Alejandro Amenábar",
+      "descripcion": "Una viuda afligida descubre sucesos extraños, que apuntan hacia la presencia de fantasmas en su apartada mansión.",
+      "imagen": "TheOthers.png"
+    }
+  ],
+  "opcionesCrucigrama": [    
+    "CADENAPERPETUA",
+    "ZODIAC",
+    "CASABLANCA",
+    "LAISLASINIESTRA",
+    "ORIGENES",      
+    "DAVIDFINCHER",
+    "DAVIDLYNCH",
+    "MARTINSCORSESE",
+    "CHRISTOPHERNOLAN",
+    "STANLEYKUBRICK"     
+  ]
+}
