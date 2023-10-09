@@ -231,3 +231,4 @@ function asignarPuntos() {
     inpPoints2.value = jugadores[1].puntos;
   }
 }
+

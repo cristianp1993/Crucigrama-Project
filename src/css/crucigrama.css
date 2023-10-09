@@ -1,97 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
 
-body{
-    background: linear-gradient(to right, #000000, #333333);
-    height: 90vh; 
-    margin: 0; 
-    color: white;
+body {
+  background: linear-gradient(to right, #000000, #333333);
+  height: 90vh;
+  margin: 0;
+  color: white;
+  
 }
 
 .containerCrucigrama {
-    display: flex;
-    flex-direction: row; 
-    text-align: center;
-    justify-content: space-between; 
-    align-items: flex-start; /* Cambiado a flex-start para alinear en la parte superior */
-    height: 60vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
+  align-items: flex-start; /* Cambiado a flex-start para alinear en la parte superior */
+  height: 60%;
 }
 
 .player1,
 .player2,
 #tablaCrucigrama {
-    flex: 1; 
-    margin: 15px;
+  flex: 1;
+  margin: 15px;
 }
 
 h1,
 .player1,
-.player2{
-    font-family: 'Kalam', cursive;    
-    padding: 10px;
-    border-radius: 10px;
+.player2 {
+  font-family: "Kalam", cursive;
+  padding: 10px;
+  border-radius: 10px;
 }
-h1{
-    display: flex;
-    flex-direction: row; 
-    text-align: center;
-    justify-content: center;
-    align-items: center; 
-}
-
-.inp-points{
-    height: 30px;
-    width: 100px;
-    border-radius:10px ;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
+h1 {
+height: 2%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.box{
-  
-    position: relative;
-    width: 20%; 
-    height: 20vh;
-    transform-style: preserve-3d;
-    animation: animate 30s linear infinite;
-    margin-left: 40%;
+.inp-points {
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-@keyframes animate{
-    0%{
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    100%{
-        transform: perspective(1000px) rotateY(360deg);
-    }
-}
-.box span {
-    position: absolute;
-    display: inline-block;
-    width: 150px; 
-    height: 150px; 
-    overflow: hidden;
-    transform-origin: center;
-    transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i)*36deg)) translateZ(350px); 
-    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #1004);
+.box {
+    height: 25%;
+  display: flex;
+  animation: rotar 15s linear infinite;
 }
 
-.box span .image-container {
-    position: relative;
+/* Esconder la última imagen */
+.box span:last-child {
+  display: none;
 }
 
-.box span img{
+.box .image-container img {
+  width: 200px; /* Ajusta el tamaño según sea necesario */
+  height: 200px; /* Ajusta el tamaño según sea necesario */
+  object-fit: contain;
+  margin-right: 10px;
+}
+@keyframes rotar {
+    0% {
+        transform: translateX(0);
+      }
     
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+      100% { 
+        transform: translateX(-100%);
+      }
 }
-
 
 .btn-regresar {
     position: absolute;
-    bottom: 10px; 
-    left: 10px; 
+  width: 100%;
+  bottom: 10px;
+  left: 10px;
+}
+
+.btn-regresar button {
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: brown;
+}
+
+/* Media Query para pantallas medianas */
+@media only screen and (max-width: 768px) {
+    .box {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 150px; /* Ajusta el tamaño según sea necesario */
+        height: 150px; /* Ajusta el tamaño según sea necesario */
+    }
+}
+
+/* Media Query para pantallas pequeñas */
+@media only screen and (max-width: 480px) {
+    .box {
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 100px; /* Ajusta el tamaño según sea necesario */
+        height: 100px; /* Ajusta el tamaño según sea necesario */
+    }
 }
