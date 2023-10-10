@@ -1,37 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Kalam:wght@300&family=Montserrat:wght@100;200&display=swap");
 
-body{
-    background-color: #121212; /* Fondo oscuro */
-    
+body {
+  background-color: #080f28;
+  width: 98%;
+  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Kalam", cursive;
+  font-family: "Montserrat", sans-serif;
 }
-nav{    
-    background: linear-gradient(to right, #ff5252, #b33939); 
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
+nav {
+  background: linear-gradient(to right, #141a32, #05022e);
+  color: #fdfefe;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-.navbar-brand{
-    font-weight: bold;
-    font-size: 35px;
+.navbar-brand {
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
-.nav-link{
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    font-weight: bold;
+.nav-link {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
 }
-.register-users{
-    color: white;
+.register-users {
+  color: #fdfefe;
 }
-.container{
-    padding: 10px;
-    background: linear-gradient(to right, #ff5252, #b33939); 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 0 20px rgba(255, 82, 82, 0.8);
-    margin-top: 20px;
-    border-radius: 10px;
+.container {
+  padding: 10px;
+  background: linear-gradient(to right, #080f28, #01061a);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #080f28;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
+#revista {
+  color: #fdfefe;
+  font-weight: bold;
+}
 
+.card,
+.card-title,
+.card-anio,
+.card-director {
+  color: #000;
+  font-weight: bold;
+}
 
-
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}

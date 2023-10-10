@@ -23,7 +23,7 @@ function fillCards() {
     card.className = "col-md-3";
 
     const cardDiv = document.createElement("div");
-    cardDiv.className = "card mb-3";
+    cardDiv.className = "card mb-3 d-flex flex-column";
 
     const img = document.createElement("img");
     img.style.width = "100%";
@@ -31,11 +31,12 @@ function fillCards() {
     img.className = "card-img-top";
 
     const body = document.createElement("div");
-    body.className = "card-body";
+    body.className = "card-body d-flex flex-column";
 
     const titulo = document.createElement("h5");
     titulo.textContent = peli.titulo;
     titulo.className = "card-title";
+    
 
     const anio = document.createElement("h6");
     anio.className = "card-anio";
@@ -60,5 +61,22 @@ function fillCards() {
 
     // Agregar card al HTML
     document.getElementById("peliculas").appendChild(card);
+  });
+  igualarAlturaCards();
+}
+
+function igualarAlturaCards() {
+  const cards = document.querySelectorAll(".card-body");
+  let maxHeight = 0;
+
+  //Se busca la altura maxima de las tarjeta
+  cards.forEach((card) => {
+    const height = card.offsetHeight;
+    maxHeight = height > maxHeight ? height : maxHeight;
+  });
+
+  //Se actualiza la altura de lamas grande a todas
+  cards.forEach((card) => {
+    card.style.height = `${maxHeight}px`;
   });
 }

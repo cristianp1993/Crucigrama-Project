@@ -1,35 +1,46 @@
-body{
-    background-color: #121212; /* Fondo oscuro */
-    
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Kalam:wght@300&family=Montserrat:wght@100;200&display=swap");
+
+body {
+  background-color: #080f28;
+  width: 98%;
+  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Kalam", cursive;
+  font-family: "Montserrat", sans-serif;
 }
 
-.row{
+.row {
+  padding: 10px;
+ 
   display: flex;
-    justify-content: center; 
-    align-items: center; 
-    background: linear-gradient(to right, #ff5252, #b33939); 
-    box-shadow: 0 0 20px rgba(255, 82, 82, 0.8);
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #080f28, #01061a);
+  box-shadow: 0 0 20px rgba(38, 12, 109, 0.8);
+}
+
+.row h2{
+  color: #fdfefe;
+  font-weight: bold;
 }
 
 .container {
-    padding: 20px;
-    background: linear-gradient(to right, #ff5252, #b33939); 
-    border-radius: 10px; 
-    box-shadow: 0 0 20px rgba(255, 82, 82, 0.8);
-    margin-top: 20px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    min-height: 70vh; 
+  padding: 20px;
+  background: linear-gradient(to right, #080f28, #01061a);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(17, 13, 128, 0.8);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
 }
-
 
 .title-registro {
-    color: white;
-    font-size: 30rem;
+  color: white;
+  font-size: 30rem;
 }
 #btn-adicionar {
-  background-color: rgba(177, 81, 81, 0.8);
+  background-color: rgba(33, 71, 128, 0.8);
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -39,15 +50,18 @@ body{
   cursor: pointer;
   transition: transform 0.3s;
 }
-
+h3{
+  color: #fdfefe;
+  font-weight: bold;
+}
 .btn-regresar {
-    position: absolute;
-    bottom: 10px; 
-    left: 10px; 
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
 #btn-adicionar:hover {
-  transform: scale(1.2);
+  transform: scale(1.06);
 }
 
 .success {
@@ -55,7 +69,7 @@ body{
 }
 
 .error {
-  border: 4px solid rgb(255, 251, 0);
+  border: 4px solid rgb(255, 8, 0);
 }
 
 .form-group {
@@ -77,4 +91,9 @@ body{
   text-align: center;
   width: 100%;
   margin-top: 10px;
+}
+
+ul {
+  color: #fbfcfc;
+  font-weight: bold;
 }

@@ -6,10 +6,6 @@ cargarOpciones();
 //variable que nos dira si juega el player 1 o el 2
 let turno = true;
 
-// Esta variable guardara temporalmente la letra BUENA de cada campo del crucigrama
-// Para compararla con el valor ingresado por la persona
-let letraTemp = "";
-
 //funcion que trae del archivo variables.json la matriz qeu tiene las opciones
 async function cargarOpciones() {
   try {
@@ -42,7 +38,7 @@ function llenarCuadros(matrizOpciones) {
     const numeroPalabra = i + 1;
     const posicionCelda = document.createElement("td");
     posicionCelda.id = numeroPalabra;
-    posicionCelda.textContent = `#${numeroPalabra}`; // Posición basada en 1, no en 0
+    posicionCelda.textContent = numeroPalabra; // Posición basada en 1, no en 0
     fila.appendChild(posicionCelda);
 
     //recorremos siempre la cantidad de letras de la palabra mas larga
@@ -55,61 +51,37 @@ function llenarCuadros(matrizOpciones) {
       input.style.width = "30px";
       input.style.height = "30px";
       input.style.textAlign = "center";
+      input.style.userSelect = "none";
       input.style.color = "transparent";
       input.maxLength = 1;
       input.id = `input-${i}-${j}`;
-
-      // Asignamos la letra correspondiente si existe sino ponemos un vacio
-      if (palabraActual[j] != "" && palabraActual[j] != undefined) {
-        input.value = palabraActual[j];
-      } else {
-        console.log(palabraActual[j] + "esta vacia");
-      }
-
-      //Al hacer click en el input obtenemos el valor actual
-      //para que cuando cambie comparemos si la letra es la de la palabra
-      input.addEventListener("click", (event) => {
-        if (event.target.value !== "") {
-          // Solo establece letraTemp si el valor del input no está vacío
-          letraTemp = event.target.value;
-          event.target.value = "";
-        }
-      });
-
-      //agrego un change para que en caso que se salga del input sin haber escrito nada
-      //vuelva asignar su valor original
-      input.addEventListener("blur", (ele)=>{
-        if (ele.target.value === "") {
-            // Solo establece letraTemp si el valor del input no está vacío
-            ele.target.value = letraTemp            
-          }
-      })
+      input.setAttribute("data-value", palabraActual[j] || "");
 
       input.addEventListener("keydown", function (event) {
         // Verifica si la tecla presionada es una tecla alfanumerica para validar si es la de la palabra
         //del crucigrama
-
+        const dataValue = event.target.getAttribute("data-value");
         if (validarLetras.test(event.key)) {
-          if (letraTemp === event.key.toUpperCase()) {
+          if (dataValue === event.key.toUpperCase()) {
+            event.target.value = event.key.toUpperCase();
+            event.target.style.color = "#F2F3F4";
+            event.target.style.fontWeight = "bold";
+            event.target.style.backgroundColor = "#58D68D";
+            event.target.disabled = true;
+
             Swal.fire({
               title: "¡Felicidades!",
               text: "Letra Correcta, continua jugando",
               icon: "success",
               timer: 2000,
-            });
-
-            event.target.style.color = "#F2F3F4";
-            event.target.style.fontWeight = "bold";
-            event.target.style.backgroundColor = "#58D68D";
-            event.target.value = letraTemp;
-            event.target.disabled = true;
+            });        
 
             actualizarTurno("correcto");
             asignarTurno();
             asignarPuntos();
             restarCaracter();
           } else {
-            event.target.value = letraTemp;
+           
             Swal.fire({
               title: "¡Mala Ahí!",
               text: "Letra Incorrecta, Pierdes el turno",
@@ -155,19 +127,19 @@ function restarCaracter() {
       Swal.fire({
         title: "¡Juego Terminado!",
         text: jugadores[0].usuario + " gana la partida",
-        icon: "info"
+        icon: "info",
       });
     } else if (jugadores[0].puntos === jugadores[1].puntos) {
       Swal.fire({
         title: "¡Juego Terminado!",
         text: "La partida queda empatada en puntos",
-        icon: "info"
+        icon: "info",
       });
     } else {
       Swal.fire({
         title: "¡Juego Terminado!",
         text: jugadores[1].usuario + " gana la partida",
-        icon: "info"        
+        icon: "info",
       });
     }
   }
@@ -231,4 +203,3 @@ function asignarPuntos() {
     inpPoints2.value = jugadores[1].puntos;
   }
 }
-
