@@ -203,3 +203,7 @@ function asignarPuntos() {
     inpPoints2.value = jugadores[1].puntos;
   }
 }
+
+document.getElementById("btn-regresar").addEventListener("click", function() {
+  window.location.href = "../index.html";
+});

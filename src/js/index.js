@@ -80,3 +80,7 @@ function igualarAlturaCards() {
     card.style.height = `${maxHeight}px`;
   });
 }
+
+document.getElementById("nav-registrar").addEventListener("click", function() {
+  window.location.href = "views/registro.html";
+});

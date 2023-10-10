@@ -245,3 +245,6 @@ fechaNacimiento.addEventListener('keyup', () => {
     fechaNacimiento.setAttribute('title', 'Fecha de Nacimiento');
 });
 
+document.getElementById("btn-regresar").addEventListener("click", function() {
+    window.location.href = "../index.html";
+  });
