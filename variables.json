@@ -57,16 +57,46 @@
       "imagen": "TheOthers.png"
     }
   ],
-  "opcionesCrucigrama": [    
-    "CADENAPERPETUA",
-    "ZODIAC",
-    "CASABLANCA",
-    "LAISLASINIESTRA",
-    "ORIGENES",      
-    "DAVIDFINCHER",
-    "DAVIDLYNCH",
-    "MARTINSCORSESE",
-    "CHRISTOPHERNOLAN",
-    "STANLEYKUBRICK"     
+  "opcionesCrucigrama": [
+    {
+      "palabra": "CADENAPERPETUA",
+      "rutaImagen": "../assets/Pistas/cadenaPerpetua.jpg"
+    },
+    {
+      "palabra": "ZODIAC",
+      "rutaImagen": "../assets/Pistas/zodiac.jpg"
+    },
+    {
+      "palabra": "CASABLANCA",
+      "rutaImagen": "../assets/Pistas/casablanca.jpg"
+    },
+    {
+      "palabra": "LAISLASINIESTRA",
+      "rutaImagen": "../assets/Pistas/islasiniestra.jpg"
+    },
+    {
+      "palabra": "ORIGENES",
+      "rutaImagen": "../assets/Pistas/origenes.jpg"
+    },
+    {
+      "palabra": "DAVIDFINCHER",
+      "rutaImagen": "../assets/Pistas/fincher.jpg"
+    },
+    {
+      "palabra": "DAVIDLYNCH",
+      "rutaImagen": "../assets/Pistas/lynch.jpg"
+    },
+    {
+      "palabra": "MARTINSCORSESE",
+      "rutaImagen": "../assets/Pistas/scorsese.jpg"
+    },
+    {
+      "palabra": "CHRISTOPHERNOLAN",
+      "rutaImagen": "../assets/Pistas/nolan.jpg"
+    },
+    {
+      "palabra": "STANLEYKUBRICK",
+      "rutaImagen": "../assets/Pistas/kubric.jpg"
+    }
   ]
 }

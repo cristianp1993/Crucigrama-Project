@@ -25,8 +25,10 @@ function llenarCuadros(matrizOpciones) {
   const tabla = document.getElementById("tablaCrucigrama");
 
   // Obtener todas las palabras
-  const palabras = matrizOpciones;
+  const palabras = matrizOpciones.map((opcion) => opcion.palabra);
+  const imagenes = matrizOpciones.map((opcion) => opcion.rutaImagen);
 
+  llenarPistas(imagenes);
   // Encontrar la longitud máxima de las palabras
   const maxLongitud = Math.max(...palabras.map((word) => word.length));
 
@@ -74,14 +76,13 @@ function llenarCuadros(matrizOpciones) {
               text: "Letra Correcta, continua jugando",
               icon: "success",
               timer: 2000,
-            });        
+            });
 
             actualizarTurno("correcto");
             asignarTurno();
             asignarPuntos();
             restarCaracter();
           } else {
-           
             Swal.fire({
               title: "¡Mala Ahí!",
               text: "Letra Incorrecta, Pierdes el turno",
@@ -109,6 +110,27 @@ function llenarCuadros(matrizOpciones) {
 
   llenarJugadores();
   asignarTurno();
+}
+
+function llenarPistas(imagenes) {
+  const boxContainer = document.querySelector(".box");
+  imagenes.forEach((imagen, indice) => {
+    
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("image-container");
+    
+    const titleDiv = document.createElement("div");
+    titleDiv.classList.add("title");
+    titleDiv.textContent = indice + 1; 
+    imageContainer.appendChild(titleDiv);
+    
+    const imageElement = document.createElement("img");
+    imageElement.src = imagen;
+    
+    imageContainer.appendChild(imageElement);
+    
+    boxContainer.appendChild(imageContainer);
+  });
 }
 
 //obtenemos la cantidad total de caracteres para saber cuando acaba el juego
@@ -204,6 +226,10 @@ function asignarPuntos() {
   }
 }
 
-document.getElementById("btn-regresar").addEventListener("click", function() {
+document.getElementById("btn-regresar").addEventListener("click", function () {
   window.location.href = "../index.html";
+});
+
+document.getElementById("btn-comojugar").addEventListener("click", function () {
+  window.open("../assets/Doc/ComoJugar.pdf", "_blank");
 });

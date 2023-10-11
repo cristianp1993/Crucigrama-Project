@@ -172,8 +172,9 @@ function validarJugadores(){
         // Almacenar la variable jugadores en localStorage
         localStorage.setItem('jugadores', JSON.stringify(jugadores));
 
-        // Redirigir a la nueva página
-        window.location.href = 'crucigrama.html';
+        setTimeout(function() {
+            window.location.href = 'crucigrama.html';
+        }, 2000);
 
     }  
 }

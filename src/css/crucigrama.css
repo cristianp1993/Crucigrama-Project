@@ -82,14 +82,64 @@ h1 {
 
 
 .btn-regresar {
-  position: absolute;
+  position: fixed;
+  bottom: 10px; 
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  bottom: 10px;
-  left: 10px;
+  padding: 0 10px; /
+}
+
+#btn-regresar,
+#btn-comojugar {
+  width: 15%; 
+}
+
+#btn-comojugar {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 
+.btn-doc {
+  position: relative;
+  overflow: hidden;
+  background-color: #663732; 
+  color: #fff; 
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
 
+.btn-doc:hover {
+  background-color: #df5a4b; 
+}
+
+.btn-doc span {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-doc::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ff8c00, #00bcd4, #ff8c00); /* Gradiente de colores */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease; /* Transición de la animación de colores */
+}
+
+.btn-doc:hover::before {
+  transform: translateX(100%);
+}
 
 @media only screen and (max-width: 768px) {
   .box {
