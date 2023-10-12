@@ -63,7 +63,7 @@ function llenarCuadros(matrizOpciones) {
         // Verifica si la tecla presionada es una tecla alfanumerica para validar si es la de la palabra
         //del crucigrama
         const dataValue = event.target.getAttribute("data-value");
-        if (validarLetras.test(event.key)) {
+        if (event.key.length === 1 & validarLetras.test(event.key)) {
           if (dataValue === event.key.toUpperCase()) {
             event.target.value = event.key.toUpperCase();
             event.target.style.color = "#F2F3F4";
@@ -71,8 +71,11 @@ function llenarCuadros(matrizOpciones) {
             event.target.style.backgroundColor = "#58D68D";
             event.target.disabled = true;
 
+            const mensajeBuena = ['Buenisima','Reebiennn','Si señorrr','Crackkk!'];            
+            const indiceAleatorio = Math.floor(Math.random() * mensajeBuena.length);
+            const palabraAleatoria = mensajeBuena[indiceAleatorio];
             Swal.fire({
-              title: "¡Felicidades!",
+              title: "¡"+palabraAleatoria+"!",
               text: "Letra Correcta, continua jugando",
               icon: "success",
               timer: 2000,
@@ -83,8 +86,11 @@ function llenarCuadros(matrizOpciones) {
             asignarPuntos();
             restarCaracter();
           } else {
+            const mensajeMala = ['Mala Ahí','Equivocado pa','No señorrr','No hay nadie peor que tu','Pfff Nooo'];            
+            const indiceAleatorio = Math.floor(Math.random() * mensajeMala.length);
+            const palabraAleatoria = mensajeMala[indiceAleatorio];
             Swal.fire({
-              title: "¡Mala Ahí!",
+              title: "¡"+palabraAleatoria+"!",
               text: "Letra Incorrecta, Pierdes el turno",
               icon: "error",
               timer: 2000,
@@ -111,6 +117,7 @@ function llenarCuadros(matrizOpciones) {
   llenarJugadores();
   asignarTurno();
 }
+
 
 function llenarPistas(imagenes) {
   const boxContainer = document.querySelector(".box");

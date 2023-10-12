@@ -60,43 +60,53 @@
   "opcionesCrucigrama": [
     {
       "palabra": "CADENAPERPETUA",
-      "rutaImagen": "../assets/Pistas/cadenaPerpetua.jpg"
+      "rutaImagen": "../assets/Pistas/cadenaPerpetua.jpg",
+      "posicion": 1
     },
     {
       "palabra": "ZODIAC",
-      "rutaImagen": "../assets/Pistas/zodiac.jpg"
+      "rutaImagen": "../assets/Pistas/zodiac.jpg",
+      "posicion": 2
     },
     {
       "palabra": "CASABLANCA",
-      "rutaImagen": "../assets/Pistas/casablanca.jpg"
+      "rutaImagen": "../assets/Pistas/casablanca.jpg",
+      "posicion": 3
     },
     {
       "palabra": "LAISLASINIESTRA",
-      "rutaImagen": "../assets/Pistas/islasiniestra.jpg"
+      "rutaImagen": "../assets/Pistas/islasiniestra.jpg",
+      "posicion": 4
     },
     {
       "palabra": "ORIGENES",
-      "rutaImagen": "../assets/Pistas/origenes.jpg"
+      "rutaImagen": "../assets/Pistas/origenes.jpg",
+      "posicion": 5
     },
     {
       "palabra": "DAVIDFINCHER",
-      "rutaImagen": "../assets/Pistas/fincher.jpg"
+      "rutaImagen": "../assets/Pistas/fincher.jpg",
+      "posicion": 6
     },
     {
       "palabra": "DAVIDLYNCH",
-      "rutaImagen": "../assets/Pistas/lynch.jpg"
+      "rutaImagen": "../assets/Pistas/lynch.jpg",
+      "posicion": 7
     },
     {
       "palabra": "MARTINSCORSESE",
-      "rutaImagen": "../assets/Pistas/scorsese.jpg"
+      "rutaImagen": "../assets/Pistas/scorsese.jpg",
+      "posicion": 8
     },
     {
       "palabra": "CHRISTOPHERNOLAN",
-      "rutaImagen": "../assets/Pistas/nolan.jpg"
+      "rutaImagen": "../assets/Pistas/nolan.jpg",
+      "posicion": 9
     },
     {
       "palabra": "STANLEYKUBRICK",
-      "rutaImagen": "../assets/Pistas/kubric.jpg"
+      "rutaImagen": "../assets/Pistas/kubric.jpg",
+      "posicion": 10
     }
   ]
 }
