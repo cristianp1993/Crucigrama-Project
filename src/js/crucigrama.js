@@ -13,8 +13,7 @@ async function cargarOpciones() {
     const data = await response.json();
     matrizOpciones = data.opcionesCrucigrama;
     console.log(matrizOpciones);
-    llenarCuadros(matrizOpciones);
-    contarCaracteres();
+    llenarCuadros(matrizOpciones);    
   } catch (error) {
     console.error("Error fetching JSON:", error);
   }
@@ -22,12 +21,14 @@ async function cargarOpciones() {
 
 //funcion que llena la matriz del crucigrama
 function llenarCuadros(matrizOpciones) {
-  const tabla = document.getElementById("tablaCrucigrama");
 
+  const tabla = document.getElementById("tablaCrucigrama");
+  
   // Obtener todas las palabras
   const palabras = matrizOpciones.map((opcion) => opcion.palabra);
   const imagenes = matrizOpciones.map((opcion) => opcion.rutaImagen);
-
+  
+  contarCaracteres(palabras);
   llenarPistas(imagenes);
   // Encontrar la longitud máxima de las palabras
   const maxLongitud = Math.max(...palabras.map((word) => word.length));
@@ -141,10 +142,10 @@ function llenarPistas(imagenes) {
 }
 
 //obtenemos la cantidad total de caracteres para saber cuando acaba el juego
-function contarCaracteres() {
-  for (let i = 0; i < matrizOpciones.length; i++) {
+function contarCaracteres(palabras) {
+  for (let i = 0; i < palabras.length; i++) {
     // Obtiene la longitud de la palabra actual y la suma al total
-    totalCaracteres += matrizOpciones[i].length;
+    totalCaracteres += palabras[i].length;
   }
 }
 
