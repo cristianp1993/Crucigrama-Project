@@ -11,23 +11,28 @@ nav {
   background: linear-gradient(to right, #141a32, #05022e);
   color: #fdfefe;
   font-size: 20px;
-  display: flex;
-  justify-content: space-between;
 }
 .navbar-brand {
   font-weight: bold;
-  font-size: 35px;
-  text-align: center;
-  justify-content: center;
+  font-size:40px;
+}
+
+.container-fluido{
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  width: 100%;
 }
-.nav-link {
+
+.nav-link,.navbar-peliculas {
   cursor: pointer;
   border: none;
   background-color: transparent;
   font-weight: bold;
+  
 }
+
 .register-users {
   color: #fdfefe;
 }

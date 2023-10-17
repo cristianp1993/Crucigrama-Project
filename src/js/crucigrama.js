@@ -238,6 +238,3 @@ document.getElementById("btn-regresar").addEventListener("click", function () {
   window.location.href = "../index.html";
 });
 
-document.getElementById("btn-comojugar").addEventListener("click", function () {
-  window.open("../assets/Doc/ComoJugar.pdf", "_blank");
-});

@@ -84,3 +84,8 @@ function igualarAlturaCards() {
 document.getElementById("nav-registrar").addEventListener("click", function() {
   window.location.href = "views/registro.html";
 });
+
+
+document.getElementById("btn-comojugar").addEventListener("click", function () {
+  window.open("/src/assets/Doc/ComoJugar.pdf", "_blank");
+});
